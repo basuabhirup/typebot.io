@@ -17,6 +17,8 @@ import { openRouterBlock } from "@typebot.io/open-router-block";
 import { openRouterCredentialsSchema } from "@typebot.io/open-router-block/schemas";
 import { openAIBlock } from "@typebot.io/openai-block";
 import { openAICredentialsSchema } from "@typebot.io/openai-block/schemas";
+import { perplexityBlock } from "@typebot.io/perplexity-block";
+import { perplexityCredentialsSchema } from "@typebot.io/perplexity-block/schemas";
 import { segmentBlock } from "@typebot.io/segment-block";
 import { segmentCredentialsSchema } from "@typebot.io/segment-block/schemas";
 import { togetherAiBlock } from "@typebot.io/together-ai-block";
@@ -37,4 +39,5 @@ export const forgedCredentialsSchemas = {
   [segmentBlock.id]: segmentCredentialsSchema,
   [groqBlock.id]: groqCredentialsSchema,
   [zendeskBlock.id]: zendeskCredentialsSchema,
+  [perplexityBlock.id]: perplexityCredentialsSchema,
 };
