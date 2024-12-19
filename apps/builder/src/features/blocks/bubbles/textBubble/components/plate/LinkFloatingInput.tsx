@@ -9,6 +9,7 @@ import {
   InputGroup,
   InputLeftElement,
   Stack,
+  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import {
@@ -42,6 +43,7 @@ export interface LinkFloatingToolbarProps {
 }
 
 export function LinkFloatingToolbar({ state }: LinkFloatingToolbarProps) {
+  const isDark = useColorMode().colorMode === "dark";
   const bgColor = useColorModeValue("white", "gray.800");
   const urlInputRef = useRef<HTMLInputElement>(null);
   const insertState = useFloatingLinkInsertState({
@@ -115,7 +117,7 @@ export function LinkFloatingToolbar({ state }: LinkFloatingToolbarProps) {
     input
   ) : (
     <HStack
-      bgColor="white"
+      bgColor={isDark ? "gray.800" : "white"}
       p="2"
       rounded="md"
       borderWidth={1}
